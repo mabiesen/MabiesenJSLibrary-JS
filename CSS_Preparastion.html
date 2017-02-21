@@ -1,0 +1,39 @@
+<script>
+	(function (){
+    var all = document.getElementsByTagName("*");
+    var ids = [];
+    var classes = [];
+
+    for (var i=0, max=all.length; i < max; i++) {
+        var elem = all[i];
+         if(elem.id) {
+            ids.push(elem.id);
+         }
+
+         if(elem.className) {
+            var classList = elem.className.split(" ");
+            Array.prototype.push.apply(classes, classList);
+         }
+    }
+
+
+    console.log("Ids:");
+    ids.forEach(function(e){
+        console.log(e);
+    });
+
+    console.log("\nClasses:");
+    classes.forEach(function(e){
+        console.log(e);
+    });
+
+		var divs = document.getElementsByTagName("div");
+		console.log("\nDivs:")
+		for(var i = 0; i < divs.length; i++){
+		   //do something to each div like
+		   console.log(divs[i]);
+		}
+
+
+})();
+</script>
